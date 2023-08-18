@@ -4,6 +4,24 @@ public class Cliente{
     private double renda;
     private char sexo;
     private boolean especial;
+    private String nome;
+    private String cpf;
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public boolean isEspecial() {
         return especial;
