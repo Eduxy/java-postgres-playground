@@ -75,5 +75,9 @@ public class Cliente{
         else System.out.println("A renda deve ser maior ou igual a zero.");
 
     }
+
+    public String toString(){
+        return "Cliente: " + nome;
+    }
     
 }
