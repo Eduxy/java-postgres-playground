@@ -129,7 +129,7 @@ public class MathUtilTest {
         int esperado = 3;
         int obtido = MathUtil.mdc(a, b);
 
-        assertTrue(mdc(a,mdc(b,c))== mdc(mdc(a,b),c));
+        assertTrue(mdc(a,mdc(b,c))== mdc(mdc(a,b),c) && mdc(mdc(a,b),c) == mdc(a,b,c));
     }
 
     @Test
@@ -145,7 +145,8 @@ public class MathUtilTest {
     void testeMdc3NenhumValor() {
         int obtido = mdc();
 
-        assertThrows(ArrayIndexOutOfBoundsException.class, this::mdcSemParametros);
+        var exception = assertThrows(ArrayIndexOutOfBoundsException.class, this::mdcSemParametros);
+        System.out.println(exception.getMessage());
     }
 
     void mdcSemParametros(){

@@ -25,7 +25,12 @@ public class MathUtil {
         //throw new UnsupportedOperationException("Não é possível calcular. ");
     }
     public static int mdc (int ...valores) {
-        int a = valores[0];
+        if(valores.length == 0)
+            throw new ArrayIndexOutOfBoundsException("É necessário ao menos um valor para calcular o MDC.");
+        
+            int a = valores[0];
+        
+        
         for (int b : valores) {
             a = mdc(a,b);
             
